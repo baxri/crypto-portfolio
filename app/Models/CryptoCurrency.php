@@ -17,6 +17,7 @@ class CryptoCurrency extends Model
         'symbol',
         'slug',
         'balance',
+        'price',
     ];
 
     public static function add(User $user, $data)
@@ -40,7 +41,8 @@ class CryptoCurrency extends Model
             'name' => $info[$data['symbol']]->name,
             'symbol' => $info[$data['symbol']]->symbol,
             'slug' => $info[$data['symbol']]->slug,
-            'balance' => '0',
+            'balance' => $data['balance'],
+            'price' => $info[$data['symbol']]->quote->USD->price,
         ];
 
         return self::create($data);

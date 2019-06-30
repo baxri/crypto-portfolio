@@ -24,7 +24,8 @@ class CryptoCurrencyAddRequest extends FormRequest
     public function rules()
     {
         return [
-            'symbol' => 'required'
+            'symbol' => 'required',
+            'balance' => 'required',
         ];
     }
 }
