@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\CryptoCurrency;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -37,4 +38,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function cryptoCurrencies()
+    {
+        return $this->hasMany(CryptoCurrency::class, 'user_id');
+    }
+
+    public static function signUp($data)
+    {
+        // Encrypt password
+        $data['password'] = bcrypt($data['password']);
+
+        return self::create($data);
+    }
+
+
 }
