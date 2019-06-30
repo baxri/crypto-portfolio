@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="nvr">
+    <serverData>
+      <paths name="nvr">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="crypto-portfolio" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
