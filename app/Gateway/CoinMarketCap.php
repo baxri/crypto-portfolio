@@ -4,7 +4,6 @@ namespace App\Gateway;
 
 class CoinMarketCap
 {
-
     private $endPoint = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/';
     private $apiKey = 'eb29ca2e-6822-473f-869c-2c56cf6893ae';
 
