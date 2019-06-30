@@ -50,6 +50,8 @@ class CoinMarketCap
         $response = curl_exec($curl);
         $response = json_decode($response);
         curl_close($curl);
+
+
         return $response->data;
     }
 }
